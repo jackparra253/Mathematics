@@ -17,7 +17,8 @@
                 value += terms[i].Value;
             }
 
-            Result result = new Result(value, terms.FirstOrDefault().Constant);
+
+            Result result = new Result(value, value == 0 ? string.Empty :terms.FirstOrDefault().Constant);
 
             return result;
         }
